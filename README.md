@@ -12,11 +12,14 @@ Comme le dernier, fait un fork de ce projet sur pour te créer ta copie.
 
 ## 1ère Partie : Sauvons le temps !
 
+Une fois le projet forké, téléchargé et ouvert sur ta machine, pense à ouvrir la scène `Main`.
+
 J'aimerais que le jeu sauvegarde les étapes du temps du joueur une fois qu'il a complété un tour complet.
 
 J'ai créé une méthode `Save` dans le script `Timer` (qui se trouve dans le dossier "Assets/Scripts") qui est appelée une fois que le joueur complète un tour complet.
 
 1. **5 Points** : Avec ce qu'on a vu en cours, rajoute le code nécessaire dans la méthode `Save` pour sauvegarder les étapes (la variable `steps` qui se trouve ligne 7) dans un fichier nommé **"score.txt"** sous format texte à la racine du projet (peut importe le dossier, tant que tu t'y retrouve). Tu n'es pas obligé d'utiliser la méthode que l'on a vu en cours.
+P.S.: Tu n'es pas obligé de faire un tour complet pour t'assurer que ton code fonctionne : tu peux rajouter un script de test qui appel directement la méthode au lancement de la scène. Pense bien à le retirer à la fin!
 
 J'ai créé une méthode `Load` dans le même script. Elle est appelée automatiquement quand le niveau se charge afin d'afficher le dernier temps sauvegardé avant que le joueur ne se lance.
 
