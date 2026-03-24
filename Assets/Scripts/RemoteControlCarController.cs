@@ -73,6 +73,8 @@ public class RemoteControlCarController : MonoBehaviour
     private float groundContactGracePeriod = 0.2f;
     private float lastGroundContactPointTime = 0.0f;
 
+    public Vector3 Velocity => rigidbody.linearVelocity; 
+
     public Vector3 GravityDirection
     {
         get
@@ -138,6 +140,8 @@ public class RemoteControlCarController : MonoBehaviour
     private void FixedUpdate()
     {
         Vector3 linearVelocity = rigidbody.linearVelocity;
+
+        
 
         // https://docs.unity3d.com/Packages/com.unity.inputsystem@1.8/manual/Workflow-Actions.html
         Vector2 playerMoveInput = playerMoveAction.ReadValue<Vector2>();
