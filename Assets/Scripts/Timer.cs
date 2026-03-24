@@ -1,11 +1,14 @@
 using System.Collections.Generic;
 using System.Diagnostics;
+using TMPro;
 
 public static class Timer
 {
     private static readonly Stopwatch stopwatch = new();
     private static readonly List<long> steps = new();
 
+
+    
     public static bool IsRunning
     {
         get => stopwatch.IsRunning;
