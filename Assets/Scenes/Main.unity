@@ -257,7 +257,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7404491053036363751, guid: fef2bff1befe481459bea93d6dfda772, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1717379160}
   m_SourcePrefab: {fileID: 100100000, guid: fef2bff1befe481459bea93d6dfda772, type: 3}
 --- !u!1 &235821393
 GameObject:
@@ -1589,11 +1592,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63b4f3d586725394789672a44fa51b40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimerLabel
+--- !u!1 &1717379154 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7404491053036363751, guid: fef2bff1befe481459bea93d6dfda772, type: 3}
+  m_PrefabInstance: {fileID: 100940532}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &1717379158 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2094138681037594920, guid: fef2bff1befe481459bea93d6dfda772, type: 3}
+  m_PrefabInstance: {fileID: 100940532}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1717379160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717379154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29937e9db39a60846b6e0b345b3f4627, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FOVManager
+  rb: {fileID: 1882743541}
+  carController: {fileID: 1882743543}
+  Speedometer: {fileID: 0}
+  mainCamera: {fileID: 1717379158}
+  carMagnitude: 0
+  minFOV: 60
+  maxFOV: 120
+  velocity: {x: 0, y: 0, z: 0}
 --- !u!4 &1882743540 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7572154243793213594, guid: e473153ea71452047bc93ccd89f5d549, type: 3}
   m_PrefabInstance: {fileID: 637470444}
   m_PrefabAsset: {fileID: 0}
+--- !u!54 &1882743541 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 3942339039546997869, guid: e473153ea71452047bc93ccd89f5d549, type: 3}
+  m_PrefabInstance: {fileID: 637470444}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1882743543 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 596209699132056023, guid: e473153ea71452047bc93ccd89f5d549, type: 3}
+  m_PrefabInstance: {fileID: 637470444}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcdb699ce76b3ae4f9fa9bb0ebd22148, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RaceCarController
 --- !u!1 &2144993073
 GameObject:
   m_ObjectHideFlags: 0

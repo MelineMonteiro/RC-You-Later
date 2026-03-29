@@ -67,6 +67,8 @@ public class Speedometer : MonoBehaviour
         label.SetText($"{kmPerHour} km/h");
     }
 
+    
+
     private struct FrameData
     {
         public readonly float Time;
