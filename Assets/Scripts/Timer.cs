@@ -1,14 +1,18 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using TMPro;
+using UnityEngine;
 
 public static class Timer
 {
     private static readonly Stopwatch stopwatch = new();
     private static readonly List<long> steps = new();
+    private static string SaveLocation => Application.dataPath + "/../score.txt"; // Chemin vers le projet a la racine 
 
 
-    
+
+
+
     public static bool IsRunning
     {
         get => stopwatch.IsRunning;
@@ -56,6 +60,12 @@ public static class Timer
     public static void Save()
     {
         // TODO : save our time steps (line 7 of this script) inside a file.
+
+
+        string scoreText = string.Join("\n", steps); // contenu du fichier
+        System.IO.File.WriteAllText(SaveLocation, scoreText);// insertion des données dans le fichier texte
+
+        UnityEngine.Debug.Log(SaveLocation);
     }
 
     public static void Load()
