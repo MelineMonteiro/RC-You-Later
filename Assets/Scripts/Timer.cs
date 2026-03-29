@@ -73,5 +73,24 @@ public static class Timer
         // TODO : load our time steps from a file (if we have any)
         // and store them inside our steps variable (line 7 of this script)
         // to show them to the player before starting a race.
+
+
+        if (System.IO.File.Exists(SaveLocation)) // verifier si le fichier score existe
+        {
+            string content = System.IO.File.ReadAllText(SaveLocation);// lire le contenu du fichier
+            string[] lines = content.Split('\n');// découper le texte
+
+            steps.Clear();// vider le step
+
+            foreach (string line in lines)// lire chaque ligne
+            {
+                if (long.TryParse(line, out long value))
+                    steps.Add(value);// ajouter dans steps
+            }
+        }
+        else
+        {
+            UnityEngine.Debug.Log("le fichier n'existe pas");
+        }
     }
 }
