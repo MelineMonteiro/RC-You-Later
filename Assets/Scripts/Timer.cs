@@ -88,9 +88,6 @@ public static class Timer
                     steps.Add(value);// ajouter dans steps
             }
         }
-        else
-        {
-            UnityEngine.Debug.Log("le fichier n'existe pas");
-        }
+        
     }
 }
